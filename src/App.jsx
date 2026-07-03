@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import * as XLSX from 'xlsx';
 import { 
   Palette, 
   Hammer, 
@@ -309,27 +308,33 @@ export default function App() {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Export enquiries to Excel file
-  const exportToExcel = () => {
+  // Export enquiries to Excel file (xlsx loaded dynamically to avoid startup crash)
+  const exportToExcel = async () => {
     if (localEnquiries.length === 0) return;
-    const rows = localEnquiries.map((item, index) => ({
-      'S.No': index + 1,
-      'Date & Time': item.date,
-      'Customer Name': item.name,
-      'Phone Number': item.phone,
-      'Email': item.email,
-      'Service Type': item.serviceType,
-      'Message': item.message,
-    }));
-    const worksheet = XLSX.utils.json_to_sheet(rows);
-    worksheet['!cols'] = [
-      { wch: 6 }, { wch: 22 }, { wch: 22 }, { wch: 16 },
-      { wch: 28 }, { wch: 22 }, { wch: 50 }
-    ];
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, 'RVS Enquiries');
-    const fileName = `RVS_Enquiries_${new Date().toLocaleDateString('en-IN').replace(/\//g, '-')}.xlsx`;
-    XLSX.writeFile(workbook, fileName);
+    try {
+      const XLSX = await import('xlsx');
+      const rows = localEnquiries.map((item, index) => ({
+        'S.No': index + 1,
+        'Date & Time': item.date,
+        'Customer Name': item.name,
+        'Phone Number': item.phone,
+        'Email': item.email,
+        'Service Type': item.serviceType,
+        'Message': item.message,
+      }));
+      const worksheet = XLSX.utils.json_to_sheet(rows);
+      worksheet['!cols'] = [
+        { wch: 6 }, { wch: 22 }, { wch: 22 }, { wch: 16 },
+        { wch: 28 }, { wch: 22 }, { wch: 50 }
+      ];
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, 'RVS Enquiries');
+      const fileName = `RVS_Enquiries_${new Date().toLocaleDateString('en-IN').replace(/\//g, '-')}.xlsx`;
+      XLSX.writeFile(workbook, fileName);
+    } catch (err) {
+      console.error('Excel export failed:', err);
+      alert('Could not generate Excel file. Please try again.');
+    }
   };
 
   // Form submit handler
