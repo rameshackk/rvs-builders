@@ -103,52 +103,100 @@ const SERVICES = [
 const PORTFOLIO_PROJECTS = [
   {
     id: 1,
-    title: "Premium Acrylic Modular Kitchen",
-    category: "interiors",
-    description: "High-gloss seamless finish kitchen with smart storage pull-outs, chimney setup, and double sink quartz slab.",
-    location: "Anna Nagar, Chennai",
-    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80"
+    title: "Modern Bedroom Wardrobe with LED Ceiling",
+    category: "carpentry",
+    description: "Full-room wardrobe installation with sliding doors, LED cove lighting on false ceiling, and matching window pelmet in soft teal finish.",
+    location: "Chennai",
+    image: "/rvs-builders/projects/98545f49d0d134aa30e79e5be19d9d71.jpg"
   },
   {
     id: 2,
-    title: "Custom Veneer Wardrobe & Bed Setup",
+    title: "Two-Tone Designer Wardrobe",
     category: "carpentry",
-    description: "Solid plywood sliding wardrobe set with matching master bed design in natural oak veneer polish.",
-    location: "Adyar, Chennai",
-    image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=600&q=80"
+    description: "Premium white and charcoal grey wardrobe with geometric mountain-cut panel design and contemporary pull handles.",
+    location: "Chennai",
+    image: "/rvs-builders/projects/baad21b764983983d526d962ba2039e9.jpg"
   },
   {
     id: 3,
-    title: "Gypsum Ceiling & Cove Light Design",
-    category: "interiors",
-    description: "Premium false ceiling installation with indirect LED lighting strips and custom wood paneling ceiling grids.",
-    location: "Nungambakkam, Chennai",
-    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80"
+    title: "Beige & Wood Bedroom Wardrobe",
+    category: "carpentry",
+    description: "Floor-to-ceiling wardrobe in rich wood veneer top with matte beige lower panels, matching dressing counter and bed platform.",
+    location: "Chennai",
+    image: "/rvs-builders/projects/b9a4748fa08cefe0ab059a504d33f13d.jpg"
   },
   {
     id: 4,
-    title: "Exterior Painting & Weatherproofing Coating",
-    category: "painting",
-    description: "Anti-fungal and crack-bridging silicon paint protection applied to a newly renovated commercial facade.",
-    location: "Velachery, Chennai",
-    image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80"
+    title: "Grey Gloss Sliding Wardrobe",
+    category: "carpentry",
+    description: "Built-in high-gloss grey sliding wardrobe with upper loft cabinets in light grey, maximizing full wall storage space.",
+    location: "Chennai",
+    image: "/rvs-builders/projects/9553211551fadf8045ccc624a049cb0f.jpg"
   },
   {
     id: 5,
-    title: "Civil Wall Removal & Open Arch Creation",
-    category: "civil",
-    description: "Demolished a load-bearing wall partition, reinforced ceiling support, and built a custom granite breakfast table counter.",
-    location: "Thiruvanmiyur, Chennai",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80"
+    title: "Modular Parallel Kitchen – Teal Finish",
+    category: "interiors",
+    description: "Spacious parallel layout modular kitchen in teal acrylic finish with grey stone backsplash and integrated chimney setup.",
+    location: "Chennai",
+    image: "/rvs-builders/projects/a4d1550e351fd3de3a19ab05a58f1b17.jpg"
   },
   {
     id: 6,
-    title: "Electrical Phase Distribution Panels",
-    category: "electrical",
-    description: "Comprehensive 3-phase wiring, DB distribution boards configuration, and home automation cabling setups.",
-    location: "Arumbakkam, Chennai",
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80"
-  }
+    title: "L-Shaped Wooden Modular Kitchen",
+    category: "interiors",
+    description: "L-shaped kitchen with natural wood finish cabinets, frosted glass shutters, and full granite counter with double sink.",
+    location: "Chennai",
+    image: "/rvs-builders/projects/d6891d4ffab93b85c8c1c7a7465dba7d.jpg"
+  },
+  {
+    id: 7,
+    title: "Corporate Office Workstation Setup",
+    category: "commercial",
+    description: "Large-scale corporate office interior with modular workstations, false ceiling, and ambient lighting for 100+ employees.",
+    location: "Chennai",
+    image: "/rvs-builders/projects/4c2a9421550ffb56b92c1d347dc6e6b1.jpg"
+  },
+  {
+    id: 8,
+    title: "Open Office – Orange Accent Cubicles",
+    category: "commercial",
+    description: "Modern open-plan office space with orange partition screens, cable management flooring, and industrial-style pendant lights.",
+    location: "Chennai",
+    image: "/rvs-builders/projects/6835d700137a559c3c7681405f09e06f.jpg"
+  },
+  {
+    id: 9,
+    title: "Premium Open Office Interior",
+    category: "commercial",
+    description: "Stylish open workstation layout with yellow accent dividers, built-in storage walls, and energy-efficient lighting systems.",
+    location: "Chennai",
+    image: "/rvs-builders/projects/b59689fce29c42e124c152b88cb500b8.jpg"
+  },
+  {
+    id: 10,
+    title: "Large-Scale IT Office Fitout",
+    category: "commercial",
+    description: "End-to-end turnkey fitout for large IT office including partitions, wiring, flooring, and modular furniture installation.",
+    location: "Chennai",
+    image: "/rvs-builders/projects/c0cc64f9978f64be1236bde48b58e0c0.jpg"
+  },
+  {
+    id: 11,
+    title: "Kitchen Pull-Out Storage System",
+    category: "carpentry",
+    description: "Custom built-in pull-out bin and drawer unit inside kitchen island — seamlessly hidden behind shaker-style cabinet doors.",
+    location: "Chennai",
+    image: "/rvs-builders/projects/37555dc0fefe3ef0e645960d8ba73056.jpg"
+  },
+  {
+    id: 12,
+    title: "Compact Modular Kitchen with Loft",
+    category: "interiors",
+    description: "Compact modular kitchen design with wood-textured cabinets, overhead loft storage, and tiled backsplash with open shelving.",
+    location: "Chennai",
+    image: "/rvs-builders/projects/d6891d4ffab93b85c8c1c7a7465dba7d.jpg"
+  },
 ];
 
 // Testimonials data
@@ -912,11 +960,9 @@ export default function App() {
                 <div className="flex flex-wrap justify-center gap-2 mb-12">
                   {[
                     { label: 'All Projects', value: 'all' },
+                    { label: 'Carpentry & Wardrobes', value: 'carpentry' },
                     { label: 'Interior Design', value: 'interiors' },
-                    { label: 'Carpentry', value: 'carpentry' },
-                    { label: 'Painting', value: 'painting' },
-                    { label: 'Civil Works', value: 'civil' },
-                    { label: 'Electrical', value: 'electrical' }
+                    { label: 'Commercial Spaces', value: 'commercial' },
                   ].map(btn => (
                     <button
                       key={btn.value}
