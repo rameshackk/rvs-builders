@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import * as XLSX from 'xlsx';
 import { 
   Palette, 
   Hammer, 
@@ -27,7 +28,8 @@ import {
   Info,
   Database,
   Trash2,
-  Lock
+  Lock,
+  Github
 } from 'lucide-react';
 
 // Service data definition
@@ -308,18 +310,37 @@ export default function App() {
     return Object.keys(newErrors).length === 0;
   };
 
+  // Export enquiries to Excel file
+  const exportToExcel = () => {
+    if (localEnquiries.length === 0) return;
+    const rows = localEnquiries.map((item, index) => ({
+      'S.No': index + 1,
+      'Date & Time': item.date,
+      'Customer Name': item.name,
+      'Phone Number': item.phone,
+      'Email': item.email,
+      'Service Type': item.serviceType,
+      'Message': item.message,
+    }));
+    const worksheet = XLSX.utils.json_to_sheet(rows);
+    worksheet['!cols'] = [
+      { wch: 6 }, { wch: 22 }, { wch: 22 }, { wch: 16 },
+      { wch: 28 }, { wch: 22 }, { wch: 50 }
+    ];
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'RVS Enquiries');
+    const fileName = `RVS_Enquiries_${new Date().toLocaleDateString('en-IN').replace(/\//g, '-')}.xlsx`;
+    XLSX.writeFile(workbook, fileName);
+  };
+
   // Form submit handler
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
       setIsSubmitting(true);
-      
-      // Simulate API call
       setTimeout(() => {
         setIsSubmitting(false);
         setIsSuccess(true);
-
-        // Store submitted data in localStorage for user retrieval
         const currentData = {
           id: Date.now(),
           date: new Date().toLocaleString(),
@@ -333,21 +354,9 @@ export default function App() {
         const updated = [currentData, ...existing];
         localStorage.setItem('rvs_enquiries', JSON.stringify(updated));
         setLocalEnquiries(updated);
-
-        // Reset Form Fields
-        setFormData({
-          name: '',
-          phone: '',
-          email: '',
-          serviceType: '',
-          message: ''
-        });
-        
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-          setIsSuccess(false);
-        }, 5000);
-      }, 1500);
+        setFormData({ name: '', phone: '', email: '', serviceType: '', message: '' });
+        setTimeout(() => { setIsSuccess(false); }, 5000);
+      }, 1000);
     }
   };
 
@@ -1436,7 +1445,7 @@ export default function App() {
           {/* Bottom Copyright Area */}
           <div className="pt-8 mt-8 border-t border-brand-subtle/80 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
             <p>© {new Date().getFullYear()} RVS Builders. All rights reserved.</p>
-            <div>
+            <div className="flex flex-col sm:flex-row items-center gap-3">
               <button 
                 onClick={() => setShowAdminPanel(true)} 
                 className="hover:text-brand-accent hover:underline transition-colors font-bold text-brand-primary flex items-center gap-1"
@@ -1444,6 +1453,15 @@ export default function App() {
                 <Lock size={12} />
                 <span>Proprietor: R Stephen (Admin Portal)</span>
               </button>
+              <a
+                href="https://github.com/your-username/your-repo"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border border-brand-accent/20 bg-brand-accent/10 px-3 py-2 text-brand-primary font-semibold hover:bg-brand-accent/20 transition-colors"
+              >
+                <Github size={14} />
+                <span>View on GitHub</span>
+              </a>
             </div>
           </div>
 
@@ -1484,13 +1502,23 @@ export default function App() {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center pb-2 border-b border-slate-100">
                     <span className="text-xs font-semibold text-slate-500">Total: {localEnquiries.length} submissions</span>
-                    <button 
-                      onClick={clearAllEnquiries}
-                      className="text-red-600 hover:text-red-700 text-xs font-bold flex items-center gap-1 transition-colors"
-                    >
-                      <Trash2 size={14} />
-                      <span>Clear All submissions</span>
-                    </button>
+                    <div className="flex items-center gap-3">
+                      <button
+                        onClick={exportToExcel}
+                        className="bg-green-600 hover:bg-green-700 text-white text-xs font-bold flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all shadow-sm"
+                        title="Download all enquiries as Excel file"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download Excel
+                      </button>
+                      <button 
+                        onClick={clearAllEnquiries}
+                        className="text-red-600 hover:text-red-700 text-xs font-bold flex items-center gap-1 transition-colors"
+                      >
+                        <Trash2 size={14} />
+                        <span>Clear All</span>
+                      </button>
+                    </div>
                   </div>
 
                   {/* List of Enquiries */}
