@@ -338,30 +338,54 @@ export default function App() {
     }
   };
 
-  // Form submit handler
-  const handleSubmit = (e) => {
+  // ── Formspree Form ID ─────────────────────────────────────────────────────
+  // Sign up FREE at https://formspree.io → create a form → paste your ID below
+  const FORMSPREE_ID = 'YOUR_FORM_ID'; // e.g. 'xyzabcde'
+
+  // Form submit handler – sends data to Formspree (cross-device) + localStorage backup
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      setIsSubmitting(true);
-      setTimeout(() => {
-        setIsSubmitting(false);
-        setIsSuccess(true);
-        const currentData = {
-          id: Date.now(),
-          date: new Date().toLocaleString(),
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email || 'Not Provided',
-          serviceType: formData.serviceType,
-          message: formData.message
-        };
-        const existing = JSON.parse(localStorage.getItem('rvs_enquiries') || '[]');
-        const updated = [currentData, ...existing];
-        localStorage.setItem('rvs_enquiries', JSON.stringify(updated));
-        setLocalEnquiries(updated);
-        setFormData({ name: '', phone: '', email: '', serviceType: '', message: '' });
-        setTimeout(() => { setIsSuccess(false); }, 5000);
-      }, 1000);
+    if (!validateForm()) return;
+    setIsSubmitting(true);
+    const payload = {
+      'Customer Name': formData.name,
+      'Phone Number': formData.phone,
+      'Email': formData.email || 'Not Provided',
+      'Service Type': formData.serviceType,
+      'Message': formData.message,
+      'Submitted At': new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+    };
+    try {
+      // Send to Formspree – accessible from any device via formspree.io dashboard
+      if (FORMSPREE_ID !== 'YOUR_FORM_ID') {
+        const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error('Formspree submission failed');
+      }
+    } catch (err) {
+      console.warn('Formspree error (saving locally as backup):', err);
+    } finally {
+      // Always save locally as backup too
+      const currentData = {
+        id: Date.now(),
+        date: new Date().toLocaleString(),
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email || 'Not Provided',
+        serviceType: formData.serviceType,
+        message: formData.message,
+      };
+      const existing = JSON.parse(localStorage.getItem('rvs_enquiries') || '[]');
+      const updated = [currentData, ...existing];
+      localStorage.setItem('rvs_enquiries', JSON.stringify(updated));
+      setLocalEnquiries(updated);
+      setIsSubmitting(false);
+      setIsSuccess(true);
+      setFormData({ name: '', phone: '', email: '', serviceType: '', message: '' });
+      setTimeout(() => { setIsSuccess(false); }, 5000);
     }
   };
 
@@ -1484,15 +1508,27 @@ export default function App() {
                 <Database size={22} className="text-brand-accent" />
                 <div>
                   <h3 className="font-bold text-lg leading-tight">Enquiries Admin Portal</h3>
-                  <p className="text-[10px] text-slate-500">View and manage customer quote submissions stored in LocalStorage</p>
+                  <p className="text-[10px] text-slate-500">Local submissions shown below &bull; For all-device access, view at Formspree dashboard</p>
                 </div>
               </div>
-              <button 
-                onClick={() => setShowAdminPanel(false)}
-                className="text-slate-400 hover:text-brand-primary p-1 rounded-lg hover:bg-slate-100 transition-all"
-              >
-                <X size={20} />
-              </button>
+              <div className="flex items-center gap-2">
+                <a
+                  href="https://formspree.io/forms"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hidden sm:inline-flex items-center gap-1.5 bg-brand-primary text-white text-[11px] font-bold px-3 py-1.5 rounded-lg hover:bg-brand-dark transition-all"
+                  title="View all submissions from any device"
+                >
+                  <ExternalLink size={12} />
+                  <span>Formspree Dashboard</span>
+                </a>
+                <button 
+                  onClick={() => setShowAdminPanel(false)}
+                  className="text-slate-400 hover:text-brand-primary p-1 rounded-lg hover:bg-slate-100 transition-all"
+                >
+                  <X size={20} />
+                </button>
+              </div>
             </div>
 
             {/* Modal Body */}
