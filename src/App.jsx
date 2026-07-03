@@ -28,8 +28,7 @@ import {
   Info,
   Database,
   Trash2,
-  Lock,
-  Github
+  Lock
 } from 'lucide-react';
 
 // Service data definition
