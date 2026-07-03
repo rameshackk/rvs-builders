@@ -27,7 +27,8 @@ import {
   Info,
   Database,
   Trash2,
-  Lock
+  Lock,
+  ExternalLink
 } from 'lucide-react';
 
 // Service data definition
@@ -1458,12 +1459,12 @@ export default function App() {
                 <span>Proprietor: R Stephen (Admin Portal)</span>
               </button>
               <a
-                href="https://github.com/your-username/your-repo"
+                href="https://github.com/rameshackk/rvs-builders"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-md border border-brand-accent/20 bg-brand-accent/10 px-3 py-2 text-brand-primary font-semibold hover:bg-brand-accent/20 transition-colors"
               >
-                <Github size={14} />
+                <ExternalLink size={14} />
                 <span>View on GitHub</span>
               </a>
             </div>
