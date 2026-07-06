@@ -732,7 +732,7 @@ export default function App() {
                           <div className="w-12 h-12 rounded-lg bg-brand-subtle/50 text-brand-primary flex items-center justify-center group-hover:bg-brand-primary group-hover:text-brand-accent transition-colors duration-300">
                             <IconComponent size={24} className="stroke-[2]" />
                           </div>
-                          <h3 className="text-lg font-bold text-brand-primary mt-5 group-hover:text-brand-accent transition-colors">
+                          <h3 className="text-lg font-bold text-brand-accent mt-5 group-hover:text-brand-accent transition-colors">
                             {service.title}
                           </h3>
                           <p className="text-sm text-brand-dark/80 mt-3 leading-relaxed">
@@ -779,7 +779,7 @@ export default function App() {
                     <div className="w-12 h-12 bg-brand-accent/15 text-brand-primary rounded-lg flex items-center justify-center mb-5">
                       <ShieldCheck size={26} />
                     </div>
-                    <h3 className="text-lg font-bold text-brand-primary mb-2">One-Stop Solution</h3>
+                    <h3 className="text-lg font-bold text-brand-accent mb-2">One-Stop Solution</h3>
                     <p className="text-sm text-brand-dark/80 leading-relaxed">
                       We coordinate masonry, tiling, electrical grids, modular cabinets, and polish. You deal with only one point of contact.
                     </p>
@@ -788,7 +788,7 @@ export default function App() {
                     <div className="w-12 h-12 bg-brand-accent/15 text-brand-primary rounded-lg flex items-center justify-center mb-5">
                       <Briefcase size={26} />
                     </div>
-                    <h3 className="text-lg font-bold text-brand-primary mb-2">Material + Labour</h3>
+                    <h3 className="text-lg font-bold text-brand-accent mb-2">Material + Labour</h3>
                     <p className="text-sm text-brand-dark/80 leading-relaxed">
                       We supply top-brand raw materials and skilled tradesmen, removing the stress of material sourcing.
                     </p>
@@ -797,7 +797,7 @@ export default function App() {
                     <div className="w-12 h-12 bg-brand-accent/15 text-brand-primary rounded-lg flex items-center justify-center mb-5">
                       <Coins size={26} />
                     </div>
-                    <h3 className="text-lg font-bold text-brand-primary mb-2">Best Market Price</h3>
+                    <h3 className="text-lg font-bold text-brand-accent mb-2">Best Market Price</h3>
                     <p className="text-sm text-brand-dark/80 leading-relaxed">
                       Optimized estimations and supplier deals allow us to offer competitive rates without cutting material safety corners.
                     </p>
@@ -806,7 +806,7 @@ export default function App() {
                     <div className="w-12 h-12 bg-brand-accent/15 text-brand-primary rounded-lg flex items-center justify-center mb-5">
                       <Users size={26} />
                     </div>
-                    <h3 className="text-lg font-bold text-brand-primary mb-2">Expert Supervision</h3>
+                    <h3 className="text-lg font-bold text-brand-accent mb-2">Expert Supervision</h3>
                     <p className="text-sm text-brand-dark/80 leading-relaxed">
                       All projects are executed under the authority of R Stephen, ensuring top craftsmanship and safety compliance.
                     </p>
@@ -844,7 +844,7 @@ export default function App() {
                           {test.initials}
                         </div>
                         <div>
-                          <h4 className="font-bold text-brand-primary text-sm">{test.name}</h4>
+                          <h4 className="font-bold text-brand-accent text-sm">{test.name}</h4>
                           <p className="text-xs text-brand-dark/50">{test.location}</p>
                         </div>
                       </div>
@@ -864,7 +864,7 @@ export default function App() {
             {/* Header Banner */}
             <section className="bg-brand-subtle text-brand-dark py-16 relative border-b border-brand-subtle/55">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-dark">Our Services</h1>
+                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-accent">Our Services</h1>
                 <p className="mt-2 text-brand-dark/80 max-w-xl mx-auto text-sm sm:text-base font-light">
                   Explore all kinds of interior and building alteration works undertaken by RVS Builders under the expert direction of R Stephen.
                 </p>
@@ -886,7 +886,7 @@ export default function App() {
                             <div className="w-12 h-12 rounded-lg bg-brand-subtle/40 text-brand-primary flex items-center justify-center shrink-0">
                               <IconComponent size={24} className="stroke-[2.2]" />
                             </div>
-                            <h3 className="text-xl font-bold text-brand-primary">
+                            <h3 className="text-xl font-bold text-brand-accent">
                               {service.title}
                             </h3>
                           </div>
@@ -896,7 +896,7 @@ export default function App() {
                           </p>
 
                           <div className="mt-6">
-                            <h4 className="text-xs font-bold uppercase tracking-wider text-brand-primary/70 mb-3">Key Features:</h4>
+                            <h4 className="text-xs font-bold uppercase tracking-wider text-brand-accent/70 mb-3">Key Features:</h4>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                               {service.features.map((feat, idx) => (
                                 <div key={idx} className="flex items-center gap-2 text-xs text-brand-dark/80">
@@ -929,7 +929,7 @@ export default function App() {
                     <span className="bg-brand-accent/20 text-brand-primary text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider border border-brand-accent/40">
                       Delivery Standard
                     </span>
-                    <h3 className="text-2xl sm:text-3xl font-bold mt-4 tracking-tight text-brand-primary">
+                    <h3 className="text-2xl sm:text-3xl font-bold mt-4 tracking-tight text-brand-accent">
                       Dual Provision: Raw Material & Expert Labour
                     </h3>
                     <p className="mt-3 text-brand-dark/80 text-sm leading-relaxed">
@@ -963,7 +963,7 @@ export default function App() {
             {/* Header Banner */}
             <section className="bg-brand-subtle text-brand-dark py-16 relative border-b border-brand-subtle/55">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-dark">Our Completed Projects</h1>
+                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-accent">Our Completed Projects</h1>
                 <p className="mt-2 text-brand-dark/80 max-w-xl mx-auto text-sm sm:text-base font-light">
                   A visual showcase of carpentry, luxury modular interiors, civil structural works, and paint finishes completed in Chennai.
                 </p>
@@ -1017,7 +1017,7 @@ export default function App() {
                       
                       <div className="p-6 flex-grow flex flex-col justify-between">
                         <div>
-                          <h3 className="text-lg font-bold text-brand-primary">
+                          <h3 className="text-lg font-bold text-brand-accent">
                             {project.title}
                           </h3>
                           <p className="text-brand-dark/60 text-xs flex items-center gap-1 mt-1">
@@ -1063,7 +1063,7 @@ export default function App() {
             {/* Header Banner */}
             <section className="bg-brand-subtle text-brand-dark py-16 relative border-b border-brand-subtle/55">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-dark">About RVS Builders</h1>
+                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-accent">About RVS Builders</h1>
                 <p className="mt-2 text-brand-dark/80 max-w-xl mx-auto text-sm sm:text-base font-light">
                   A legacy of reliability and master craftsmanship in Chennai.
                 </p>
@@ -1080,7 +1080,7 @@ export default function App() {
                   {/* Left Column: Story */}
                   <div className="lg:col-span-7">
                     <span className="text-xs font-bold text-brand-accent uppercase tracking-widest">Our Profile</span>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-brand-primary mt-2">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-brand-accent mt-2">
                       Led by R Stephen: Quality Contractors in Chennai
                     </h2>
                     <div className="w-16 h-1 bg-brand-accent mt-4 mb-6 rounded-full"></div>
@@ -1096,7 +1096,7 @@ export default function App() {
                     {/* Mission and Core Values Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
                       <div className="border border-brand-subtle rounded-lg p-5 bg-brand-subtle shadow-sm">
-                        <h4 className="font-bold text-brand-primary flex items-center gap-2 text-sm">
+                        <h4 className="font-bold text-brand-accent flex items-center gap-2 text-sm">
                           <span className="w-2 h-2 rounded-full bg-brand-accent"></span>
                           Our Core Mission
                         </h4>
@@ -1106,7 +1106,7 @@ export default function App() {
                       </div>
 
                       <div className="border border-brand-subtle rounded-lg p-5 bg-brand-subtle shadow-sm">
-                        <h4 className="font-bold text-brand-primary flex items-center gap-2 text-sm">
+                        <h4 className="font-bold text-brand-accent flex items-center gap-2 text-sm">
                           <span className="w-2 h-2 rounded-full bg-brand-accent"></span>
                           Proprietor's Guarantee
                         </h4>
@@ -1127,13 +1127,13 @@ export default function App() {
                           RS
                         </div>
                         <div>
-                          <h3 className="text-lg font-bold text-brand-primary">R Stephen</h3>
+                          <h3 className="text-lg font-bold text-brand-accent">R Stephen</h3>
                           <p className="text-xs text-brand-dark/50">Proprietor & Director, RVS Builders</p>
                         </div>
                       </div>
 
                       <div className="mt-6 pt-6 border-t border-slate-100">
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-brand-primary/80 mb-2">Our Management Authority:</h4>
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-brand-accent/80 mb-2">Our Management Authority:</h4>
                         <p className="text-brand-dark/80 text-xs leading-relaxed italic">
                           "Under my direct authority and quality checks, RVS Builders guarantees that every project is completed using high-grade materials and premium skilled labour. We do not sublease works to unvetted agents; my supervisors coordinate directly with you."
                         </p>
@@ -1161,7 +1161,7 @@ export default function App() {
             {/* Header Banner */}
             <section className="bg-brand-subtle text-brand-dark py-16 relative border-b border-brand-subtle/55">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-dark">Contact Us / Get Quote</h1>
+                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-accent">Contact Us / Get Quote</h1>
                 <p className="mt-2 text-brand-dark/80 max-w-xl mx-auto text-sm sm:text-base font-light">
                   Get a free project estimation. Request a callback from R Stephen.
                 </p>
@@ -1179,7 +1179,7 @@ export default function App() {
                   <div className="lg:col-span-5 flex flex-col justify-between">
                     <div>
                       <span className="text-xs font-bold text-brand-accent uppercase tracking-widest">Office Contacts</span>
-                      <h2 className="text-2xl font-bold text-brand-primary mt-2">Get in Touch</h2>
+                      <h2 className="text-2xl font-bold text-brand-accent mt-2">Get in Touch</h2>
                       <div className="w-12 h-1 bg-brand-accent mt-3 mb-6 rounded-full"></div>
 
                       <div className="space-y-6 mt-6">
@@ -1188,7 +1188,7 @@ export default function App() {
                             <MapPin size={20} className="text-brand-primary" />
                           </div>
                           <div>
-                            <h4 className="font-semibold text-brand-primary text-sm">Office Location</h4>
+                            <h4 className="font-semibold text-brand-accent text-sm">Office Location</h4>
                             <p className="text-brand-dark/60 text-xs mt-1 leading-relaxed max-w-xs">
                               #5/11, Kalainar Street, Rani Anna Nagar, Arumbakkam, Chennai - 106
                             </p>
@@ -1200,7 +1200,7 @@ export default function App() {
                             <Mail size={20} className="text-brand-primary" />
                           </div>
                           <div>
-                            <h4 className="font-semibold text-brand-primary text-sm">Email Address</h4>
+                            <h4 className="font-semibold text-brand-accent text-sm">Email Address</h4>
                             <p className="text-brand-dark/60 text-xs mt-1">
                               <a href="mailto:rvsinterior28@gmail.com" className="hover:text-brand-accent transition-colors">
                                 rvsinterior28@gmail.com
@@ -1214,7 +1214,7 @@ export default function App() {
                             <Phone size={20} className="text-brand-primary" />
                           </div>
                           <div>
-                            <h4 className="font-semibold text-brand-primary text-sm">Call / WhatsApp</h4>
+                            <h4 className="font-semibold text-brand-accent text-sm">Call / WhatsApp</h4>
                             <p className="text-brand-dark/60 text-xs mt-1">
                               <a href="tel:9710453183" className="hover:text-brand-accent font-bold transition-colors">
                                 9710453183
@@ -1240,7 +1240,7 @@ export default function App() {
                   {/* Right Column: Form */}
                   <div className="lg:col-span-7">
                     <div className="bg-brand-subtle rounded-2xl border border-brand-subtle p-6 sm:p-10 shadow-lg relative overflow-hidden">
-                      <h3 className="text-xl sm:text-2xl font-bold text-brand-primary">Request Free Estimate</h3>
+                      <h3 className="text-xl sm:text-2xl font-bold text-brand-accent">Request Free Estimate</h3>
                       <p className="text-brand-dark/60 text-xs mt-1">Submit your requirement. R Stephen's office will schedule a free site audit.</p>
 
                       {isSuccess && (
@@ -1402,7 +1402,7 @@ export default function App() {
 
                 {/* FAQ Accordion Section */}
                 <div className="max-w-4xl mx-auto mt-20">
-                  <h3 className="text-2xl font-bold text-brand-primary text-center mb-8">Frequently Asked Questions</h3>
+                  <h3 className="text-2xl font-bold text-brand-accent text-center mb-8">Frequently Asked Questions</h3>
                   <div className="space-y-4">
                     {FAQS.map((faq, idx) => (
                       <div 
@@ -1476,7 +1476,7 @@ export default function App() {
 
             {/* Column 2: Quick Links */}
             <div>
-              <h4 className="text-sm font-bold text-brand-primary uppercase tracking-widest mb-5 border-l-2 border-brand-accent pl-3">
+              <h4 className="text-sm font-bold text-brand-accent uppercase tracking-widest mb-5 border-l-2 border-brand-accent pl-3">
                 Quick Navigation
               </h4>
               <ul className="space-y-3 text-xs">
@@ -1501,7 +1501,7 @@ export default function App() {
 
             {/* Column 3: Services Shortlist */}
             <div>
-              <h4 className="text-sm font-bold text-brand-primary uppercase tracking-widest mb-5 border-l-2 border-brand-accent pl-3">
+              <h4 className="text-sm font-bold text-brand-accent uppercase tracking-widest mb-5 border-l-2 border-brand-accent pl-3">
                 Key Services
               </h4>
               <ul className="space-y-3 text-xs">
@@ -1515,7 +1515,7 @@ export default function App() {
 
             {/* Column 4: Address Details */}
             <div>
-              <h4 className="text-sm font-bold text-brand-primary uppercase tracking-widest mb-5 border-l-2 border-brand-accent pl-3">
+              <h4 className="text-sm font-bold text-brand-accent uppercase tracking-widest mb-5 border-l-2 border-brand-accent pl-3">
                 Office Location
               </h4>
               <div className="flex gap-3 text-xs">
@@ -1712,4 +1712,5 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
 
