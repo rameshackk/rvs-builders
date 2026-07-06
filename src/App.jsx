@@ -626,7 +626,7 @@ export default function App() {
                 Get Free Quote
               </button>
             </div>
-            <div className="pt-4 border-t border-brand-subtle/40 text-center text-xs text-slate-500">
+            <div className="pt-4 border-t border-brand-subtle/40 text-center text-xs text-brand-dark/60">
               <p>Email: rvsinterior28@gmail.com</p>
               <p className="mt-1 font-semibold text-brand-primary">Call: 9710453183</p>
             </div>
@@ -668,11 +668,11 @@ export default function App() {
                   <h1 className="hero-heading font-bold mb-6">
                     <span className="hero-word">Premium</span>{' '}
                     <span className="hero-word">Spaces,</span><br />
-                    <span className="hero-word text-[#a8865a]">Masterfully</span>{' '}
-                    <span className="hero-word text-[#a8865a]">Crafted</span>
+                    <span className="hero-word text-brand-accent">Masterfully</span>{' '}
+                    <span className="hero-word text-brand-accent">Crafted</span>
                   </h1>
                   
-                  <p className="mt-6 text-base sm:text-lg text-slate-700 leading-relaxed max-w-2xl font-light">
+                  <p className="mt-6 text-base sm:text-lg text-brand-dark leading-relaxed max-w-2xl font-light">
                     "All Kinds Of Interior and Building Works Undertaken." Providing robust structural alterations, fine modular carpentry, and full renovative makeovers under the direct authority of R Stephen.
                   </p>
 
@@ -695,15 +695,15 @@ export default function App() {
                   <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-6 pt-10 border-t border-brand-subtle max-w-xl text-brand-primary">
                     <div>
                       <h3 className="text-2xl md:text-3xl font-bold text-brand-accent">100%</h3>
-                      <p className="text-[10px] text-slate-500 uppercase tracking-wider mt-1">Material Guarantee</p>
+                      <p className="text-[10px] text-brand-dark/60 uppercase tracking-wider mt-1">Material Guarantee</p>
                     </div>
                     <div>
                       <h3 className="text-2xl md:text-3xl font-bold text-brand-accent">Chennai</h3>
-                      <p className="text-[10px] text-slate-500 uppercase tracking-wider mt-1">Wide Service Area</p>
+                      <p className="text-[10px] text-brand-dark/60 uppercase tracking-wider mt-1">Wide Service Area</p>
                     </div>
                     <div className="col-span-2 md:col-span-1">
                       <h3 className="text-2xl md:text-3xl font-bold text-brand-accent">R Stephen</h3>
-                      <p className="text-[10px] text-slate-500 uppercase tracking-wider mt-1">Direct Supervision</p>
+                      <p className="text-[10px] text-brand-dark/60 uppercase tracking-wider mt-1">Direct Supervision</p>
                     </div>
                   </div>
                 </div>
@@ -727,7 +727,7 @@ export default function App() {
                   {SERVICES.slice(0, 4).map((service) => {
                     const IconComponent = service.icon;
                     return (
-                      <div key={service.id} className="bg-white rounded-xl border border-brand-subtle shadow-md p-6 flex flex-col justify-between hover:shadow-xl hover:border-brand-accent/30 transition-all duration-300 group">
+                      <div key={service.id} className="bg-brand-subtle rounded-xl border border-brand-subtle shadow-md p-6 flex flex-col justify-between hover:shadow-xl hover:border-brand-accent/30 transition-all duration-300 group">
                         <div>
                           <div className="w-12 h-12 rounded-lg bg-brand-subtle/50 text-brand-primary flex items-center justify-center group-hover:bg-brand-primary group-hover:text-brand-accent transition-colors duration-300">
                             <IconComponent size={24} className="stroke-[2]" />
@@ -735,7 +735,7 @@ export default function App() {
                           <h3 className="text-lg font-bold text-brand-primary mt-5 group-hover:text-brand-accent transition-colors">
                             {service.title}
                           </h3>
-                          <p className="text-sm text-slate-600 mt-3 leading-relaxed">
+                          <p className="text-sm text-brand-dark/80 mt-3 leading-relaxed">
                             {service.description.substring(0, 110)}...
                           </p>
                         </div>
@@ -775,39 +775,39 @@ export default function App() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                  <div className="bg-white border border-brand-subtle rounded-xl p-6 hover:border-brand-accent/40 transition-all duration-300 shadow-sm">
+                  <div className="bg-brand-subtle border border-brand-subtle rounded-xl p-6 hover:border-brand-accent/40 transition-all duration-300 shadow-sm">
                     <div className="w-12 h-12 bg-brand-accent/15 text-brand-primary rounded-lg flex items-center justify-center mb-5">
                       <ShieldCheck size={26} />
                     </div>
                     <h3 className="text-lg font-bold text-brand-primary mb-2">One-Stop Solution</h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">
+                    <p className="text-sm text-brand-dark/80 leading-relaxed">
                       We coordinate masonry, tiling, electrical grids, modular cabinets, and polish. You deal with only one point of contact.
                     </p>
                   </div>
-                  <div className="bg-white border border-brand-subtle rounded-xl p-6 hover:border-brand-accent/40 transition-all duration-300 shadow-sm">
+                  <div className="bg-brand-subtle border border-brand-subtle rounded-xl p-6 hover:border-brand-accent/40 transition-all duration-300 shadow-sm">
                     <div className="w-12 h-12 bg-brand-accent/15 text-brand-primary rounded-lg flex items-center justify-center mb-5">
                       <Briefcase size={26} />
                     </div>
                     <h3 className="text-lg font-bold text-brand-primary mb-2">Material + Labour</h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">
+                    <p className="text-sm text-brand-dark/80 leading-relaxed">
                       We supply top-brand raw materials and skilled tradesmen, removing the stress of material sourcing.
                     </p>
                   </div>
-                  <div className="bg-white border border-brand-subtle rounded-xl p-6 hover:border-brand-accent/40 transition-all duration-300 shadow-sm">
+                  <div className="bg-brand-subtle border border-brand-subtle rounded-xl p-6 hover:border-brand-accent/40 transition-all duration-300 shadow-sm">
                     <div className="w-12 h-12 bg-brand-accent/15 text-brand-primary rounded-lg flex items-center justify-center mb-5">
                       <Coins size={26} />
                     </div>
                     <h3 className="text-lg font-bold text-brand-primary mb-2">Best Market Price</h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">
+                    <p className="text-sm text-brand-dark/80 leading-relaxed">
                       Optimized estimations and supplier deals allow us to offer competitive rates without cutting material safety corners.
                     </p>
                   </div>
-                  <div className="bg-white border border-brand-subtle rounded-xl p-6 hover:border-brand-accent/40 transition-all duration-300 shadow-sm">
+                  <div className="bg-brand-subtle border border-brand-subtle rounded-xl p-6 hover:border-brand-accent/40 transition-all duration-300 shadow-sm">
                     <div className="w-12 h-12 bg-brand-accent/15 text-brand-primary rounded-lg flex items-center justify-center mb-5">
                       <Users size={26} />
                     </div>
                     <h3 className="text-lg font-bold text-brand-primary mb-2">Expert Supervision</h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">
+                    <p className="text-sm text-brand-dark/80 leading-relaxed">
                       All projects are executed under the authority of R Stephen, ensuring top craftsmanship and safety compliance.
                     </p>
                   </div>
@@ -816,7 +816,7 @@ export default function App() {
             </section>
 
             {/* Testimonials Teaser */}
-            <section className="py-20 bg-slate-50 border-b border-brand-subtle/20">
+            <section className="py-20 bg-brand-subtle border-b border-brand-subtle/20">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                   <h2 className="text-xs font-bold tracking-widest text-brand-accent uppercase">Testimonials</h2>
@@ -828,14 +828,14 @@ export default function App() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {TESTIMONIALS.map((test) => (
-                    <div key={test.id} className="bg-white rounded-xl shadow-md border border-brand-subtle p-8 flex flex-col justify-between">
+                    <div key={test.id} className="bg-brand-subtle rounded-xl shadow-md border border-brand-subtle p-8 flex flex-col justify-between">
                       <div>
                         <div className="flex gap-1 mb-5">
                           {[...Array(test.rating)].map((_, i) => (
                             <Star key={i} size={18} className="fill-brand-accent text-brand-accent" />
                           ))}
                         </div>
-                        <p className="text-slate-600 italic text-sm leading-relaxed">
+                        <p className="text-brand-dark/80 italic text-sm leading-relaxed">
                           "{test.text}"
                         </p>
                       </div>
@@ -845,7 +845,7 @@ export default function App() {
                         </div>
                         <div>
                           <h4 className="font-bold text-brand-primary text-sm">{test.name}</h4>
-                          <p className="text-xs text-slate-400">{test.location}</p>
+                          <p className="text-xs text-brand-dark/50">{test.location}</p>
                         </div>
                       </div>
                     </div>
@@ -865,7 +865,7 @@ export default function App() {
             <section className="bg-brand-subtle text-brand-dark py-16 relative border-b border-brand-subtle/55">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                 <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-dark">Our Services</h1>
-                <p className="mt-2 text-slate-600 max-w-xl mx-auto text-sm sm:text-base font-light">
+                <p className="mt-2 text-brand-dark/80 max-w-xl mx-auto text-sm sm:text-base font-light">
                   Explore all kinds of interior and building alteration works undertaken by RVS Builders under the expert direction of R Stephen.
                 </p>
                 <div className="w-12 h-1 bg-brand-accent mx-auto mt-4 rounded-full"></div>
@@ -880,7 +880,7 @@ export default function App() {
                   {SERVICES.map((service) => {
                     const IconComponent = service.icon;
                     return (
-                      <div key={service.id} className="bg-white rounded-xl border border-brand-subtle shadow-md p-8 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
+                      <div key={service.id} className="bg-brand-subtle rounded-xl border border-brand-subtle shadow-md p-8 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
                         <div>
                           <div className="flex items-center gap-4">
                             <div className="w-12 h-12 rounded-lg bg-brand-subtle/40 text-brand-primary flex items-center justify-center shrink-0">
@@ -891,7 +891,7 @@ export default function App() {
                             </h3>
                           </div>
                           
-                          <p className="text-slate-600 text-sm mt-4 leading-relaxed">
+                          <p className="text-brand-dark/80 text-sm mt-4 leading-relaxed">
                             {service.description}
                           </p>
 
@@ -899,7 +899,7 @@ export default function App() {
                             <h4 className="text-xs font-bold uppercase tracking-wider text-brand-primary/70 mb-3">Key Features:</h4>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                               {service.features.map((feat, idx) => (
-                                <div key={idx} className="flex items-center gap-2 text-xs text-slate-600">
+                                <div key={idx} className="flex items-center gap-2 text-xs text-brand-dark/80">
                                   <Check size={14} className="text-brand-accent stroke-[3] shrink-0" />
                                   <span>{feat}</span>
                                 </div>
@@ -909,7 +909,7 @@ export default function App() {
                         </div>
 
                         <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
-                          <span className="text-xs font-medium text-slate-400">Available across Chennai</span>
+                          <span className="text-xs font-medium text-brand-dark/50">Available across Chennai</span>
                           <button 
                             onClick={() => triggerServiceEnquiry(service.formValue)}
                             className="bg-brand-primary hover:bg-brand-primary/95 text-brand-light text-xs font-bold px-4 py-2.5 rounded transition-all flex items-center gap-1"
@@ -932,7 +932,7 @@ export default function App() {
                     <h3 className="text-2xl sm:text-3xl font-bold mt-4 tracking-tight text-brand-primary">
                       Dual Provision: Raw Material & Expert Labour
                     </h3>
-                    <p className="mt-3 text-slate-600 text-sm leading-relaxed">
+                    <p className="mt-3 text-brand-dark/80 text-sm leading-relaxed">
                       We prevent procurement stress by supplying all certified building materials—sand, cement, steel, modular wood veneers, and premium emulsion paints—paired with vetted plumbers, carpenters, painters, and wiremen. All material specs are clearly detailed in the contract beforehand.
                     </p>
                     <div className="mt-6 flex flex-wrap gap-4">
@@ -942,7 +942,7 @@ export default function App() {
                       >
                         Enquire for Material + Labour Quote
                       </button>
-                      <a href="tel:9710453183" className="flex items-center gap-2 bg-white hover:bg-slate-50 border border-slate-300 text-brand-primary font-bold px-6 py-3 rounded-lg transition-all text-sm">
+                      <a href="tel:9710453183" className="flex items-center gap-2 bg-brand-subtle hover:bg-brand-subtle border border-brand-subtle text-brand-primary font-bold px-6 py-3 rounded-lg transition-all text-sm">
                         <Phone size={16} />
                         <span>Call 9710453183</span>
                       </a>
@@ -964,7 +964,7 @@ export default function App() {
             <section className="bg-brand-subtle text-brand-dark py-16 relative border-b border-brand-subtle/55">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                 <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-dark">Our Completed Projects</h1>
-                <p className="mt-2 text-slate-600 max-w-xl mx-auto text-sm sm:text-base font-light">
+                <p className="mt-2 text-brand-dark/80 max-w-xl mx-auto text-sm sm:text-base font-light">
                   A visual showcase of carpentry, luxury modular interiors, civil structural works, and paint finishes completed in Chennai.
                 </p>
                 <div className="w-12 h-1 bg-brand-accent mx-auto mt-4 rounded-full"></div>
@@ -989,7 +989,7 @@ export default function App() {
                       className={`px-5 py-2.5 rounded-lg text-xs font-bold shadow-sm transition-all ${
                         activePortfolioFilter === btn.value
                           ? 'bg-brand-primary text-brand-accent border border-brand-accent'
-                          : 'bg-white text-slate-600 border border-brand-subtle hover:bg-slate-50'
+                          : 'bg-brand-subtle text-brand-dark/80 border border-brand-subtle hover:bg-brand-subtle'
                       }`}
                     >
                       {btn.label}
@@ -1002,7 +1002,7 @@ export default function App() {
                   {filteredProjects.map((project) => (
                     <div 
                       key={project.id}
-                      className="bg-white rounded-xl overflow-hidden border border-brand-subtle shadow-md hover:shadow-xl transition-all duration-300 flex flex-col"
+                      className="bg-brand-subtle rounded-xl overflow-hidden border border-brand-subtle shadow-md hover:shadow-xl transition-all duration-300 flex flex-col"
                     >
                       <div className="h-64 overflow-hidden relative group">
                         <img 
@@ -1020,11 +1020,11 @@ export default function App() {
                           <h3 className="text-lg font-bold text-brand-primary">
                             {project.title}
                           </h3>
-                          <p className="text-slate-500 text-xs flex items-center gap-1 mt-1">
+                          <p className="text-brand-dark/60 text-xs flex items-center gap-1 mt-1">
                             <MapPin size={12} className="text-brand-accent" />
                             <span>{project.location}</span>
                           </p>
-                          <p className="text-sm text-slate-600 mt-3 leading-relaxed">
+                          <p className="text-sm text-brand-dark/80 mt-3 leading-relaxed">
                             {project.description}
                           </p>
                         </div>
@@ -1044,9 +1044,9 @@ export default function App() {
                 </div>
 
                 {filteredProjects.length === 0 && (
-                  <div className="text-center py-16 bg-white rounded-xl border border-slate-200">
-                    <Info size={36} className="text-slate-300 mx-auto mb-3" />
-                    <p className="text-slate-500 text-sm">No projects found in this category.</p>
+                  <div className="text-center py-16 bg-brand-subtle rounded-xl border border-brand-subtle">
+                    <Info size={36} className="text-brand-dark/40 mx-auto mb-3" />
+                    <p className="text-brand-dark/60 text-sm">No projects found in this category.</p>
                   </div>
                 )}
 
@@ -1064,7 +1064,7 @@ export default function App() {
             <section className="bg-brand-subtle text-brand-dark py-16 relative border-b border-brand-subtle/55">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                 <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-dark">About RVS Builders</h1>
-                <p className="mt-2 text-slate-600 max-w-xl mx-auto text-sm sm:text-base font-light">
+                <p className="mt-2 text-brand-dark/80 max-w-xl mx-auto text-sm sm:text-base font-light">
                   A legacy of reliability and master craftsmanship in Chennai.
                 </p>
                 <div className="w-12 h-1 bg-brand-accent mx-auto mt-4 rounded-full"></div>
@@ -1085,32 +1085,32 @@ export default function App() {
                     </h2>
                     <div className="w-16 h-1 bg-brand-accent mt-4 mb-6 rounded-full"></div>
 
-                    <p className="text-slate-600 text-sm leading-relaxed">
+                    <p className="text-brand-dark/80 text-sm leading-relaxed">
                       Established in 2016 in Arumbakkam, RVS Builders has been serving homeowners and commercial clients with absolute transparency. Our proprietor and director, **R Stephen**, holds all administrative authority and personally coordinates every project blueprint, site audit, and material quality assurance.
                     </p>
 
-                    <p className="text-slate-600 text-sm leading-relaxed mt-4">
+                    <p className="text-brand-dark/80 text-sm leading-relaxed mt-4">
                       Our company slogan, **"All Kinds Of Interior and Building Works Undertaken,"** describes our versatility. Whether you require modular wardrobe units, structural partition walls, concrete modifications, rewiring, or leak repairs, we employ expert carpenters, masons, and technicians to execute the work cleanly.
                     </p>
 
                     {/* Mission and Core Values Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
-                      <div className="border border-brand-subtle rounded-lg p-5 bg-white shadow-sm">
+                      <div className="border border-brand-subtle rounded-lg p-5 bg-brand-subtle shadow-sm">
                         <h4 className="font-bold text-brand-primary flex items-center gap-2 text-sm">
                           <span className="w-2 h-2 rounded-full bg-brand-accent"></span>
                           Our Core Mission
                         </h4>
-                        <p className="text-xs text-slate-500 mt-2 leading-relaxed">
+                        <p className="text-xs text-brand-dark/60 mt-2 leading-relaxed">
                           To streamline structural building renovations and carpenters works under one supervisor, eliminating multi-vendor scheduling delays and material cost inflate.
                         </p>
                       </div>
 
-                      <div className="border border-brand-subtle rounded-lg p-5 bg-white shadow-sm">
+                      <div className="border border-brand-subtle rounded-lg p-5 bg-brand-subtle shadow-sm">
                         <h4 className="font-bold text-brand-primary flex items-center gap-2 text-sm">
                           <span className="w-2 h-2 rounded-full bg-brand-accent"></span>
                           Proprietor's Guarantee
                         </h4>
-                        <p className="text-xs text-slate-500 mt-2 leading-relaxed">
+                        <p className="text-xs text-brand-dark/60 mt-2 leading-relaxed">
                           We contractually commit to clear pricing, provide genuine branded raw materials, and maintain full supervision to avoid errors.
                         </p>
                       </div>
@@ -1119,7 +1119,7 @@ export default function App() {
 
                   {/* Right Column: Founder Info & Frame */}
                   <div className="lg:col-span-5">
-                    <div className="bg-white border border-brand-subtle rounded-2xl shadow-xl overflow-hidden p-6 sm:p-8 relative">
+                    <div className="bg-brand-subtle border border-brand-subtle rounded-2xl shadow-xl overflow-hidden p-6 sm:p-8 relative">
                       <div className="absolute top-0 right-0 w-24 h-24 bg-brand-accent/5 rounded-bl-full pointer-events-none"></div>
                       
                       <div className="flex items-center gap-4">
@@ -1128,19 +1128,19 @@ export default function App() {
                         </div>
                         <div>
                           <h3 className="text-lg font-bold text-brand-primary">R Stephen</h3>
-                          <p className="text-xs text-slate-400">Proprietor & Director, RVS Builders</p>
+                          <p className="text-xs text-brand-dark/50">Proprietor & Director, RVS Builders</p>
                         </div>
                       </div>
 
                       <div className="mt-6 pt-6 border-t border-slate-100">
                         <h4 className="text-xs font-bold uppercase tracking-wider text-brand-primary/80 mb-2">Our Management Authority:</h4>
-                        <p className="text-slate-600 text-xs leading-relaxed italic">
+                        <p className="text-brand-dark/80 text-xs leading-relaxed italic">
                           "Under my direct authority and quality checks, RVS Builders guarantees that every project is completed using high-grade materials and premium skilled labour. We do not sublease works to unvetted agents; my supervisors coordinate directly with you."
                         </p>
                       </div>
 
                       <div className="mt-6 pt-5 border-t border-slate-100 flex items-center justify-between text-xs">
-                        <span className="text-slate-400">Arumbakkam, Chennai</span>
+                        <span className="text-brand-dark/50">Arumbakkam, Chennai</span>
                         <a href="tel:9710453183" className="text-brand-accent font-bold hover:underline">Call Proprietor</a>
                       </div>
                     </div>
@@ -1162,7 +1162,7 @@ export default function App() {
             <section className="bg-brand-subtle text-brand-dark py-16 relative border-b border-brand-subtle/55">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                 <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand-dark">Contact Us / Get Quote</h1>
-                <p className="mt-2 text-slate-600 max-w-xl mx-auto text-sm sm:text-base font-light">
+                <p className="mt-2 text-brand-dark/80 max-w-xl mx-auto text-sm sm:text-base font-light">
                   Get a free project estimation. Request a callback from R Stephen.
                 </p>
                 <div className="w-12 h-1 bg-brand-accent mx-auto mt-4 rounded-full"></div>
@@ -1189,7 +1189,7 @@ export default function App() {
                           </div>
                           <div>
                             <h4 className="font-semibold text-brand-primary text-sm">Office Location</h4>
-                            <p className="text-slate-500 text-xs mt-1 leading-relaxed max-w-xs">
+                            <p className="text-brand-dark/60 text-xs mt-1 leading-relaxed max-w-xs">
                               #5/11, Kalainar Street, Rani Anna Nagar, Arumbakkam, Chennai - 106
                             </p>
                           </div>
@@ -1201,7 +1201,7 @@ export default function App() {
                           </div>
                           <div>
                             <h4 className="font-semibold text-brand-primary text-sm">Email Address</h4>
-                            <p className="text-slate-500 text-xs mt-1">
+                            <p className="text-brand-dark/60 text-xs mt-1">
                               <a href="mailto:rvsinterior28@gmail.com" className="hover:text-brand-accent transition-colors">
                                 rvsinterior28@gmail.com
                               </a>
@@ -1215,23 +1215,23 @@ export default function App() {
                           </div>
                           <div>
                             <h4 className="font-semibold text-brand-primary text-sm">Call / WhatsApp</h4>
-                            <p className="text-slate-500 text-xs mt-1">
+                            <p className="text-brand-dark/60 text-xs mt-1">
                               <a href="tel:9710453183" className="hover:text-brand-accent font-bold transition-colors">
                                 9710453183
                               </a>
                             </p>
-                            <p className="text-[10px] text-slate-400 mt-0.5">Management Authority: R Stephen</p>
+                            <p className="text-[10px] text-brand-dark/50 mt-0.5">Management Authority: R Stephen</p>
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    <div className="mt-8 border border-brand-subtle bg-white rounded-xl p-5 shadow-sm text-center">
+                    <div className="mt-8 border border-brand-subtle bg-brand-subtle rounded-xl p-5 shadow-sm text-center">
                       <div className="flex items-center justify-center gap-1 text-brand-primary font-semibold text-sm">
                         <MapPin size={16} className="text-brand-accent animate-bounce" />
                         <span>Serving Entire Chennai Metropolitan Area</span>
                       </div>
-                      <p className="text-slate-500 text-xs mt-1.5 leading-relaxed">
+                      <p className="text-brand-dark/60 text-xs mt-1.5 leading-relaxed">
                         Arumbakkam, Anna Nagar, Adyar, T. Nagar, Velachery, Porur, Tambaram, and suburban limits.
                       </p>
                     </div>
@@ -1239,9 +1239,9 @@ export default function App() {
 
                   {/* Right Column: Form */}
                   <div className="lg:col-span-7">
-                    <div className="bg-white rounded-2xl border border-brand-subtle p-6 sm:p-10 shadow-lg relative overflow-hidden">
+                    <div className="bg-brand-subtle rounded-2xl border border-brand-subtle p-6 sm:p-10 shadow-lg relative overflow-hidden">
                       <h3 className="text-xl sm:text-2xl font-bold text-brand-primary">Request Free Estimate</h3>
-                      <p className="text-slate-500 text-xs mt-1">Submit your requirement. R Stephen's office will schedule a free site audit.</p>
+                      <p className="text-brand-dark/60 text-xs mt-1">Submit your requirement. R Stephen's office will schedule a free site audit.</p>
 
                       {isSuccess && (
                         <div className="mt-6 bg-emerald-50 border border-emerald-200 rounded-lg p-4 text-emerald-800 text-xs flex items-start gap-2.5">
@@ -1255,7 +1255,7 @@ export default function App() {
 
                       <form onSubmit={handleSubmit} className="mt-6 space-y-4">
                         <div>
-                          <label htmlFor="name" className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                          <label htmlFor="name" className="block text-xs font-semibold text-brand-dark uppercase tracking-wider mb-1">
                             Full Name <span className="text-red-500">*</span>
                           </label>
                           <input
@@ -1265,10 +1265,10 @@ export default function App() {
                             value={formData.name}
                             onChange={handleChange}
                             placeholder="Your full name"
-                            className={`w-full px-4 py-3 rounded-lg border text-sm focus:outline-none focus:ring-2 bg-slate-50/50 transition-all ${
+                            className={`w-full px-4 py-3 rounded-lg border text-sm focus:outline-none focus:ring-2 bg-brand-subtle/50 transition-all ${
                               errors.name 
                                 ? 'border-red-300 focus:ring-red-200 focus:border-red-500' 
-                                : 'border-slate-300 focus:ring-brand-accent/30 focus:border-brand-accent'
+                                : 'border-brand-subtle focus:ring-brand-accent/30 focus:border-brand-accent'
                             }`}
                           />
                           {errors.name && <p className="text-red-500 text-[11px] mt-1 font-medium">{errors.name}</p>}
@@ -1276,7 +1276,7 @@ export default function App() {
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                           <div>
-                            <label htmlFor="phone" className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                            <label htmlFor="phone" className="block text-xs font-semibold text-brand-dark uppercase tracking-wider mb-1">
                               Phone Number <span className="text-red-500">*</span>
                             </label>
                             <input
@@ -1286,18 +1286,18 @@ export default function App() {
                               value={formData.phone}
                               onChange={handleChange}
                               placeholder="10-digit mobile number"
-                              className={`w-full px-4 py-3 rounded-lg border text-sm focus:outline-none focus:ring-2 bg-slate-50/50 transition-all ${
+                              className={`w-full px-4 py-3 rounded-lg border text-sm focus:outline-none focus:ring-2 bg-brand-subtle/50 transition-all ${
                                 errors.phone 
                                   ? 'border-red-300 focus:ring-red-200 focus:border-red-500' 
-                                  : 'border-slate-300 focus:ring-brand-accent/30 focus:border-brand-accent'
+                                  : 'border-brand-subtle focus:ring-brand-accent/30 focus:border-brand-accent'
                               }`}
                             />
                             {errors.phone && <p className="text-red-500 text-[11px] mt-1 font-medium">{errors.phone}</p>}
                           </div>
 
                           <div>
-                            <label htmlFor="email" className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                              Email Address <span className="text-slate-400">(Optional)</span>
+                            <label htmlFor="email" className="block text-xs font-semibold text-brand-dark uppercase tracking-wider mb-1">
+                              Email Address <span className="text-brand-dark/50">(Optional)</span>
                             </label>
                             <input
                               type="email"
@@ -1306,10 +1306,10 @@ export default function App() {
                               value={formData.email}
                               onChange={handleChange}
                               placeholder="Your email address"
-                              className={`w-full px-4 py-3 rounded-lg border text-sm focus:outline-none focus:ring-2 bg-slate-50/50 transition-all ${
+                              className={`w-full px-4 py-3 rounded-lg border text-sm focus:outline-none focus:ring-2 bg-brand-subtle/50 transition-all ${
                                 errors.email 
                                   ? 'border-red-300 focus:ring-red-200 focus:border-red-500' 
-                                  : 'border-slate-300 focus:ring-brand-accent/30 focus:border-brand-accent'
+                                  : 'border-brand-subtle focus:ring-brand-accent/30 focus:border-brand-accent'
                               }`}
                             />
                             {errors.email && <p className="text-red-500 text-[11px] mt-1 font-medium">{errors.email}</p>}
@@ -1317,7 +1317,7 @@ export default function App() {
                         </div>
 
                         <div>
-                          <label htmlFor="serviceType" className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                          <label htmlFor="serviceType" className="block text-xs font-semibold text-brand-dark uppercase tracking-wider mb-1">
                             Select Service Required <span className="text-red-500">*</span>
                           </label>
                           <select
@@ -1325,10 +1325,10 @@ export default function App() {
                             name="serviceType"
                             value={formData.serviceType}
                             onChange={handleChange}
-                            className={`w-full px-4 py-3 rounded-lg border text-sm focus:outline-none focus:ring-2 bg-slate-50/50 transition-all appearance-none ${
+                            className={`w-full px-4 py-3 rounded-lg border text-sm focus:outline-none focus:ring-2 bg-brand-subtle/50 transition-all appearance-none ${
                               errors.serviceType 
                                 ? 'border-red-300 focus:ring-red-200 focus:border-red-500' 
-                                : 'border-slate-300 focus:ring-brand-accent/30 focus:border-brand-accent'
+                                : 'border-brand-subtle focus:ring-brand-accent/30 focus:border-brand-accent'
                             }`}
                             style={{
                               backgroundImage: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 20 20\'%3E%3Cpath stroke=\'%236b7280\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'1.5\' d=\'m6 8 4 4 4-4\'/%3E%3C/svg%3E")',
@@ -1353,7 +1353,7 @@ export default function App() {
                         </div>
 
                         <div>
-                          <label htmlFor="message" className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                          <label htmlFor="message" className="block text-xs font-semibold text-brand-dark uppercase tracking-wider mb-1">
                             Project Description / Requirements <span className="text-red-500">*</span>
                           </label>
                           <textarea
@@ -1363,10 +1363,10 @@ export default function App() {
                             onChange={handleChange}
                             rows="4"
                             placeholder="Describe your requirement (dimensions, location, timeline, etc.)"
-                            className={`w-full px-4 py-3 rounded-lg border text-sm focus:outline-none focus:ring-2 bg-slate-50/50 transition-all resize-none ${
+                            className={`w-full px-4 py-3 rounded-lg border text-sm focus:outline-none focus:ring-2 bg-brand-subtle/50 transition-all resize-none ${
                               errors.message 
                                 ? 'border-red-300 focus:ring-red-200 focus:border-red-500' 
-                                : 'border-slate-300 focus:ring-brand-accent/30 focus:border-brand-accent'
+                                : 'border-brand-subtle focus:ring-brand-accent/30 focus:border-brand-accent'
                             }`}
                           ></textarea>
                           {errors.message && <p className="text-red-500 text-[11px] mt-1 font-medium">{errors.message}</p>}
@@ -1407,7 +1407,7 @@ export default function App() {
                     {FAQS.map((faq, idx) => (
                       <div 
                         key={idx} 
-                        className="bg-white rounded-xl border border-brand-subtle overflow-hidden shadow-sm transition-all animate-fadeIn"
+                        className="bg-brand-subtle rounded-xl border border-brand-subtle overflow-hidden shadow-sm transition-all animate-fadeIn"
                       >
                         <button
                           onClick={() => toggleFaq(idx)}
@@ -1416,7 +1416,7 @@ export default function App() {
                           <span className="font-semibold text-brand-primary text-sm sm:text-base">{faq.question}</span>
                           <ChevronDown 
                             size={18} 
-                            className={`text-slate-400 shrink-0 transform transition-transform duration-300 ${
+                            className={`text-brand-dark/50 shrink-0 transform transition-transform duration-300 ${
                               openFaqIndex === idx ? 'rotate-180 text-brand-accent' : ''
                             }`}
                           />
@@ -1426,7 +1426,7 @@ export default function App() {
                             openFaqIndex === idx ? 'max-h-48 border-t border-brand-subtle' : 'max-h-0'
                           }`}
                         >
-                          <p className="px-6 py-5 text-xs sm:text-sm text-slate-600 leading-relaxed bg-slate-50/50">
+                          <p className="px-6 py-5 text-xs sm:text-sm text-brand-dark/80 leading-relaxed bg-brand-subtle/50">
                             {faq.answer}
                           </p>
                         </div>
@@ -1444,7 +1444,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-brand-subtle/40 text-slate-700 pt-16 pb-8 border-t border-brand-subtle">
+      <footer className="bg-brand-subtle/40 text-brand-dark pt-16 pb-8 border-t border-brand-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
@@ -1459,7 +1459,7 @@ export default function App() {
                   RVS <span className="text-brand-accent font-extrabold">Builders</span>
                 </span>
               </div>
-              <p className="text-xs leading-relaxed text-slate-600">
+              <p className="text-xs leading-relaxed text-brand-dark/80">
                 Chennai's trusted general building alterations and carpentry partner, led by R Stephen (Proprietor & Authority). Specializing in high-quality structural works and modular interior spaces since 2016.
               </p>
               <div className="mt-5 space-y-2 text-xs">
@@ -1490,7 +1490,7 @@ export default function App() {
                   <li key={item.val}>
                     <button 
                       onClick={() => setCurrentPage(item.val)}
-                      className="hover:text-brand-accent hover:translate-x-1 transition-all text-left font-semibold text-slate-600"
+                      className="hover:text-brand-accent hover:translate-x-1 transition-all text-left font-semibold text-brand-dark/80"
                     >
                       {item.name}
                     </button>
@@ -1505,11 +1505,11 @@ export default function App() {
                 Key Services
               </h4>
               <ul className="space-y-3 text-xs">
-                <li><button onClick={() => setCurrentPage('services')} className="hover:text-brand-accent hover:translate-x-1 transition-all text-left font-semibold text-slate-600">Interior Design</button></li>
-                <li><button onClick={() => setCurrentPage('services')} className="hover:text-brand-accent hover:translate-x-1 transition-all text-left font-semibold text-slate-600">Modular Carpentry</button></li>
-                <li><button onClick={() => setCurrentPage('services')} className="hover:text-brand-accent hover:translate-x-1 transition-all text-left font-semibold text-slate-600">Building Painting</button></li>
-                <li><button onClick={() => setCurrentPage('services')} className="hover:text-brand-accent hover:translate-x-1 transition-all text-left font-semibold text-slate-600">Civil Renovations</button></li>
-                <li><button onClick={() => setCurrentPage('services')} className="hover:text-brand-accent hover:translate-x-1 transition-all text-left font-semibold text-slate-600">Electrical & Plumbing</button></li>
+                <li><button onClick={() => setCurrentPage('services')} className="hover:text-brand-accent hover:translate-x-1 transition-all text-left font-semibold text-brand-dark/80">Interior Design</button></li>
+                <li><button onClick={() => setCurrentPage('services')} className="hover:text-brand-accent hover:translate-x-1 transition-all text-left font-semibold text-brand-dark/80">Modular Carpentry</button></li>
+                <li><button onClick={() => setCurrentPage('services')} className="hover:text-brand-accent hover:translate-x-1 transition-all text-left font-semibold text-brand-dark/80">Building Painting</button></li>
+                <li><button onClick={() => setCurrentPage('services')} className="hover:text-brand-accent hover:translate-x-1 transition-all text-left font-semibold text-brand-dark/80">Civil Renovations</button></li>
+                <li><button onClick={() => setCurrentPage('services')} className="hover:text-brand-accent hover:translate-x-1 transition-all text-left font-semibold text-brand-dark/80">Electrical & Plumbing</button></li>
               </ul>
             </div>
 
@@ -1522,7 +1522,7 @@ export default function App() {
                 <MapPin size={16} className="text-brand-accent shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-brand-primary">RVS Builders Office</p>
-                  <p className="mt-1 leading-relaxed text-slate-500">
+                  <p className="mt-1 leading-relaxed text-brand-dark/60">
                     #5/11, Kalainar Street,<br />
                     Rani Anna Nagar,<br />
                     Arumbakkam, Chennai - 106
@@ -1537,7 +1537,7 @@ export default function App() {
           </div>
 
           {/* Bottom Copyright Area */}
-          <div className="pt-8 mt-8 border-t border-brand-subtle/80 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+          <div className="pt-8 mt-8 border-t border-brand-subtle/80 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-brand-dark/60">
             <p>© {new Date().getFullYear()} RVS Builders. All rights reserved.</p>
             <div className="flex flex-col sm:flex-row items-center gap-3">
               <button 
@@ -1565,7 +1565,7 @@ export default function App() {
       {/* Admin Dashboard Modal */}
       {showAdminPanel && (
         <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-brand-subtle animate-fadeIn">
+          <div className="bg-brand-subtle rounded-2xl max-w-4xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-brand-subtle animate-fadeIn">
             
             {/* Modal Header */}
             <div className="p-6 border-b border-brand-subtle flex justify-between items-center bg-brand-light rounded-t-2xl">
@@ -1573,7 +1573,7 @@ export default function App() {
                 <Database size={22} className="text-brand-accent" />
                 <div>
                   <h3 className="font-bold text-lg leading-tight">Enquiries Admin Portal</h3>
-                  <p className="text-[10px] text-slate-500">Local submissions shown below &bull; For all-device access, view at Formspree dashboard</p>
+                  <p className="text-[10px] text-brand-dark/60">Local submissions shown below &bull; For all-device access, view at Formspree dashboard</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
@@ -1589,7 +1589,7 @@ export default function App() {
                 </a>
                 <button 
                   onClick={() => setShowAdminPanel(false)}
-                  className="text-slate-400 hover:text-brand-primary p-1 rounded-lg hover:bg-slate-100 transition-all"
+                  className="text-brand-dark/50 hover:text-brand-primary p-1 rounded-lg hover:bg-brand-subtle transition-all"
                 >
                   <X size={20} />
                 </button>
@@ -1599,7 +1599,7 @@ export default function App() {
             {/* Modal Body */}
             <div className="p-6 overflow-y-auto flex-grow">
               {localEnquiries.length === 0 ? (
-                <div className="text-center py-12 text-slate-400">
+                <div className="text-center py-12 text-brand-dark/50">
                   <Database size={48} className="mx-auto mb-4 opacity-30" />
                   <p className="text-sm font-semibold">No Enquiries Received Yet</p>
                   <p className="text-xs mt-1">Submit the contact form on the Contact Page to see mock data populate here.</p>
@@ -1607,7 +1607,7 @@ export default function App() {
               ) : (
                 <div className="space-y-4">
                   <div className="flex justify-between items-center pb-2 border-b border-slate-100">
-                    <span className="text-xs font-semibold text-slate-500">Total: {localEnquiries.length} submissions</span>
+                    <span className="text-xs font-semibold text-brand-dark/60">Total: {localEnquiries.length} submissions</span>
                     <div className="flex items-center gap-3">
                       <button
                         onClick={exportToExcel}
@@ -1630,10 +1630,10 @@ export default function App() {
                   {/* List of Enquiries */}
                   <div className="space-y-4">
                     {localEnquiries.map((item) => (
-                      <div key={item.id} className="border border-brand-subtle bg-slate-50/50 rounded-xl p-4 sm:p-5 relative shadow-sm hover:border-brand-accent/40 transition-all">
+                      <div key={item.id} className="border border-brand-subtle bg-brand-subtle/50 rounded-xl p-4 sm:p-5 relative shadow-sm hover:border-brand-accent/40 transition-all">
                         <button 
                           onClick={() => deleteEnquiry(item.id)}
-                          className="absolute top-4 right-4 text-slate-400 hover:text-red-600 p-1 rounded-md transition-colors"
+                          className="absolute top-4 right-4 text-brand-dark/50 hover:text-red-600 p-1 rounded-md transition-colors"
                           title="Delete submission"
                         >
                           <Trash2 size={16} />
@@ -1641,26 +1641,26 @@ export default function App() {
                         
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
                           <div>
-                            <span className="text-[10px] text-slate-400 uppercase tracking-wider block">Customer Details</span>
+                            <span className="text-[10px] text-brand-dark/50 uppercase tracking-wider block">Customer Details</span>
                             <p className="font-bold text-brand-dark mt-0.5">{item.name}</p>
-                            <p className="text-slate-600 mt-0.5">{item.phone}</p>
-                            <p className="text-slate-500 mt-0.5">{item.email}</p>
+                            <p className="text-brand-dark/80 mt-0.5">{item.phone}</p>
+                            <p className="text-brand-dark/60 mt-0.5">{item.email}</p>
                           </div>
                           <div>
-                            <span className="text-[10px] text-slate-400 uppercase tracking-wider block">Enquiry Type</span>
+                            <span className="text-[10px] text-brand-dark/50 uppercase tracking-wider block">Enquiry Type</span>
                             <span className="inline-block bg-brand-accent/15 text-brand-primary font-bold border border-brand-accent/30 px-2 py-0.5 rounded mt-1">
                               {item.serviceType}
                             </span>
                           </div>
                           <div>
-                            <span className="text-[10px] text-slate-400 uppercase tracking-wider block">Submission Time</span>
-                            <p className="text-slate-600 mt-1 font-medium">{item.date}</p>
+                            <span className="text-[10px] text-brand-dark/50 uppercase tracking-wider block">Submission Time</span>
+                            <p className="text-brand-dark/80 mt-1 font-medium">{item.date}</p>
                           </div>
                         </div>
 
-                        <div className="mt-4 pt-3 border-t border-slate-200/60">
-                          <span className="text-[10px] text-slate-400 uppercase tracking-wider block">Requirement message</span>
-                          <p className="text-xs text-slate-700 leading-relaxed mt-1 whitespace-pre-wrap italic">
+                        <div className="mt-4 pt-3 border-t border-brand-subtle/60">
+                          <span className="text-[10px] text-brand-dark/50 uppercase tracking-wider block">Requirement message</span>
+                          <p className="text-xs text-brand-dark leading-relaxed mt-1 whitespace-pre-wrap italic">
                             "{item.message}"
                           </p>
                         </div>
@@ -1672,7 +1672,7 @@ export default function App() {
             </div>
 
             {/* Modal Footer */}
-            <div className="p-4 border-t border-brand-subtle bg-slate-50 flex justify-end rounded-b-2xl">
+            <div className="p-4 border-t border-brand-subtle bg-brand-subtle flex justify-end rounded-b-2xl">
               <button 
                 onClick={() => setShowAdminPanel(false)}
                 className="bg-brand-primary text-brand-light font-bold text-xs px-5 py-2.5 rounded-lg hover:bg-brand-primary/95 transition-all shadow"
@@ -1712,3 +1712,4 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+

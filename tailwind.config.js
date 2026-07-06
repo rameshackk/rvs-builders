@@ -8,11 +8,11 @@ export default {
     extend: {
       colors: {
         brand: {
-          primary: '#3E3327',  // Deep Sand-Dune Bronze / Espresso
-          accent: '#C3A37A',   // Golden Beach Sand / Warm Brass
-          dark: '#241E17',     // Dark Espresso Wood (for high-contrast dark text)
-          light: '#F8F6F2',    // Elegant soft sandy beach white (Alabaster)
-          subtle: '#EAE5DC',   // Warm Sand Beige (Backgrounds & borders)
+          primary: '#ffffff',  // White (for headings and primary contrast)
+          accent: '#D4A853',   // Premium Gold (for accents, buttons, highlights)
+          dark: '#e5e5e5',     // Off-White / Light Gray (for body text)
+          light: '#0a0a0a',    // Deep Black (for main backgrounds)
+          subtle: '#1a1a1a',   // Dark Gray (for cards, borders, secondary backgrounds)
         }
       },
       fontFamily: {

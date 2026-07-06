@@ -22,16 +22,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #EAE5DC; /* brand-subtle beach sand background */
+  background: #1a1a1a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C3A37A; /* brand-accent golden sand color */
+  background: #D4A853;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #A8865A; /* darker warm sand on hover */
+  background: #b8941f;
 }
 
 /* Animations for slide-in or fade-in effects */
@@ -62,7 +62,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #C3A37A;
+  background-color: #D4A853;
   border-radius: 2px;
 }
 
