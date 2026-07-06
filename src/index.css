@@ -65,3 +65,133 @@
   background-color: #C3A37A;
   border-radius: 2px;
 }
+
+/* Responsive adjustments for desktop and mobile */
+.app-header-inner {
+  max-width: 1300px;
+}
+
+.app-nav {
+  transition: opacity 0.25s ease;
+}
+
+.app-cta {
+  transition: opacity 0.25s ease;
+}
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+.hero-form {
+  transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.hero-badge {
+  transition: transform 0.3s ease, bottom 0.3s ease, right 0.3s ease;
+}
+
+@media (max-width: 900px) {
+  .app-header-inner {
+    padding: 12px 20px;
+    gap: 16px;
+  }
+
+  .app-nav,
+  .app-cta {
+    display: none !important;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-form {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: min(92vw, 420px) !important;
+    margin: 0 auto;
+    box-shadow: 0 18px 58px rgba(0,0,0,0.18) !important;
+  }
+
+  .hero-badge {
+    position: static !important;
+    margin: 24px auto 0;
+    text-align: center !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+}
+
+@media (max-width: 680px) {
+  html {
+    scroll-padding-top: 70px;
+  }
+
+  .app-header-inner {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .app-header-inner > div,
+  .app-header-inner > button {
+    width: 100%;
+  }
+
+  .app-header-inner > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .hero-section {
+    min-height: 560px;
+  }
+
+  .hero-form {
+    padding: 22px 18px !important;
+  }
+
+  .mobile-menu-overlay {
+    padding: 16px !important;
+  }
+}
+
+.hero-heading {
+  display: block;
+  overflow: hidden;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 4.5vw, 4.5rem);
+  line-height: 1.1;
+  color: #d4a853;
+}
+
+.hero-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px) skewY(6deg);
+  animation: heroWordIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.hero-word:nth-child(2) { animation-delay: 0.12s; }
+.hero-word:nth-child(3) { animation-delay: 0.24s; }
+.hero-word:nth-child(4) { animation-delay: 0.36s; }
+.hero-word:nth-child(5) { animation-delay: 0.48s; }
+.hero-word:nth-child(6) { animation-delay: 0.60s; }
+
+@keyframes heroWordIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) skewY(6deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) skewY(0);
+  }
+}
+
