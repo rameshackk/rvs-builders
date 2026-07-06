@@ -248,6 +248,12 @@ const FAQS = [
 ];
 
 export default function App() {
+  const bgImages = [
+    '/rvs-builders/banner1.png',
+    '/rvs-builders/banner2.png',
+    '/rvs-builders/banner3.png'
+  ];
+  const [currentBgIndex, setCurrentBgIndex] = useState(0);
   const [currentPage, setCurrentPage] = useState('home'); // home | services | portfolio | about | contact
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -270,6 +276,14 @@ export default function App() {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+
+  // Background slider effect
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentBgIndex(prev => (prev + 1) % bgImages.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, []);
 
   // Load enquiries from localStorage on mount & when dashboard toggles
   useEffect(() => {
@@ -629,12 +643,15 @@ export default function App() {
             
             {/* Hero Section */}
             <section className="relative min-h-[85vh] flex items-center justify-center bg-brand-light overflow-hidden border-b border-brand-subtle/30">
-              <div className="absolute inset-0 z-0">
-                <img 
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80" 
-                  alt="Luxury modern interior renovation" 
-                  className="w-full h-full object-cover object-center opacity-20 transform scale-102"
-                />
+              <div className="absolute inset-0 z-0 bg-brand-light">
+                {bgImages.map((src, index) => (
+                  <img 
+                    key={src}
+                    src={src} 
+                    alt={`Luxury interior ${index + 1}`} 
+                    className={`absolute inset-0 w-full h-full object-cover object-center transform scale-102 transition-opacity duration-[1500ms] ${index === currentBgIndex ? 'opacity-20' : 'opacity-0'}`}
+                  />
+                ))}
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-light via-brand-light/95 to-brand-light/45"></div>
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(195,163,122,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(195,163,122,0.08)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
               </div>
